@@ -16,7 +16,7 @@ provider "aws" {
 }
 provider "turbonomic" {
     hostname   = var.hostname
-      username   = var.username
-        password   = var.password
-          skipverify = true
+    username   = var.username
+    password   = var.password
+    skipverify = true
 }
