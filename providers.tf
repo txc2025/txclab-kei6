@@ -1,11 +1,12 @@
 terraform {
     required_providers {
           tfe = {
-                  version = ~> 0.68.2
+            source = "hashicorp/tfe"
+             version = "0.68.2"
           }
-              turbonomic = {
-                      source  = "IBM/turbonomic"
-                            version = "1.3.0"
+         turbonomic = {
+               source  = "IBM/turbonomic"
+               version = "1.3.0"
               }
     }
 }
