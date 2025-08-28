@@ -29,12 +29,12 @@ locals {
 data "turbonomic_cloud_entity_recommendation" "ExampleVM" {
     entity_name  = var.repo_name
       entity_type  = "VirtualMachine"
-        default_size = "t3.nano"
+        default_size = "t2.nano"
 }
 
 resource "aws_instance" "lab1-vm1" {
   ami           = data.aws_ami.amazon_linux.id
-  instance_type = data.turbonomic_cloud_entity_recommendation.ExampleVM.new_instance_type
+  instance_type = "t2.nano"
   tags          = merge(local.common_tags, local.lifecycle_tags)
 
   lifecycle {
